@@ -1,0 +1,17 @@
+import 'package:camera_test_task/domain/permission/enum/app_permission_status.dart';
+import 'package:camera_test_task/domain/permission/repository/permission_repository.dart';
+import 'package:camera_test_task/domain/permission/usecases/permission_usecase_params.dart';
+import 'package:injectable/injectable.dart';
+
+@lazySingleton
+class GetAppPermissionStatus {
+  const GetAppPermissionStatus(this._permissionRepository);
+
+  final PermissionRepository _permissionRepository;
+
+  Future<AppPermissionStatus> call(PermissionUsecaseParams params) async {
+    return await _permissionRepository.getAppPermissionStatus(
+      params.permission,
+    );
+  }
+}
