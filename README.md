@@ -2,6 +2,9 @@
 
 This repository contains a camera application with features for capturing photos, recording videos, and handling camera permissions. Below is an overview of the key libraries used, features, and known issues.
 
+## Before running the project, please execute the following command:
+`dart run build_runner build --delete-conflicting-outputs`
+
 ## Library Choices
 
 - **Gallery Access**: The `image_picker` library was chosen for invoking the gallery. According to its documentation, `image_picker` uses the native PhotoPicker for gallery access, ensuring a seamless and platform-consistent user experience.
